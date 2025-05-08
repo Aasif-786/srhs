@@ -30,6 +30,10 @@ def save_file(file):
         current_app.logger.error(f"Error saving file: {str(e)}")
         raise
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
 @app.route('/')
 def index():
     if current_user.is_authenticated:
@@ -37,7 +41,7 @@ def index():
             return redirect(url_for('patient_dashboard'))
         else:
             return redirect(url_for('doctor_dashboard'))
-    return redirect(url_for('login'))
+    return redirect(url_for('home'))  # Now redirects to the home route
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

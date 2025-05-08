@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row align-items-center">
+    <div class="col-md-6">
+        <h1 class="display-4 fw-bold">Welcome to MediVault</h1>
+        <p class="lead">Secure, accessible healthcare records management for patients and providers.</p>
+        <p class="mb-4">MediVault provides a secure platform for managing your health records and sharing them with healthcare providers of your choice. Take control of your medical information today.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg px-4 me-md-2">Sign In</a>
+            <a href="{{ url_for('register') }}" class="btn btn-outline-primary btn-lg px-4">Register</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='img/medical_illustration.svg') }}" alt="Medical Records Illustration" class="img-fluid" 
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=MediVault';">
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5 pt-5">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                    <i data-feather="shield"></i>
+                </div>
+                <h3>Secure Storage</h3>
+                <p>Your medical records are encrypted and stored with the highest security standards.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                    <i data-feather="share-2"></i>
+                </div>
+                <h3>Controlled Sharing</h3>
+                <p>Grant and revoke access to healthcare providers anytime with our intuitive access management.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                    <i data-feather="activity"></i>
+                </div>
+                <h3>Health Insights</h3>
+                <p>Gain valuable insights from your health data with our visualization tools.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

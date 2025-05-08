@@ -1,0 +1,6 @@
+__pycache__/
+.history/
+.qodo/
+.venv/
+.git-credentials
+.gitconfig
